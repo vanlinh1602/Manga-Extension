@@ -1,0 +1,19 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.eol": "\n",
+  "json.schemas": [
+      {
+          "fileMatch": [
+              "/manifest.json"
+          ],
+          "url": "http://json.schemastore.org/chrome-manifest"
+      }
+  ]
+}
