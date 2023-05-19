@@ -13,7 +13,7 @@ const Popup = () => {
 
 	const getImage =async () => {
 		setLoading(true);
-		post('/get-image', {name: 'Lumine'}).then((res) => {
+		post('/getImage', {name: 'Lumine'}).then((res) => {
 			setImage(res.src);
 			setLoading(false);
 		});
@@ -40,7 +40,7 @@ const Popup = () => {
 				return;
 			}
 			// Send the base64 data to the backend
-			const response: IUploadImageResponse = await post('/upload-image', {image: base64Data});
+			const response: IUploadImageResponse = await post('/detectBubble', {image: base64Data});
 			// Handle the response from the backend
 			setImage('data:image/jpeg;base64,' + response.image);
 			setLoading(false);
